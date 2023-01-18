@@ -11,23 +11,34 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Rectangle()
-                .frame(width: 200, height: 100)
+                .frame(width: 200, height: 500)
                 .foregroundColor(.green)
                 .overlay(Text("Hello")
                     .foregroundColor(.white)
                     .font(.largeTitle)
                     .padding()
-                
-         )
+                         
+                )
+            Spacer()
             Rectangle()
                 .frame(width: 200, height: 100)
                 .foregroundColor(.green)
-                .overlay(Text("Hello")
-                    .foregroundColor(.white)
-                    .font(.largeTitle)
-                    .padding()
-         )
-
+                .overlay(
+                    VStack{
+                        Image("download")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .clipped()
+                        Text("Avenger")
+                            .foregroundColor(.blue)
+                            .font(.largeTitle)
+                            .padding()
+                    }
+                
+                    
+                )
+            Spacer()
+            
         }
         
         
