@@ -9,8 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Rectangle()
+                .frame(width: 200, height: 100)
+                .foregroundColor(.green)
+                .overlay(Text("Hello")
+                    .foregroundColor(.white)
+                    .font(.largeTitle)
+                    .padding()
+                
+         )
+            Rectangle()
+                .frame(width: 200, height: 100)
+                .foregroundColor(.green)
+                .overlay(Text("Hello")
+                    .foregroundColor(.white)
+                    .font(.largeTitle)
+                    .padding()
+         )
+
+        }
+        
+        
     }
 }
 
@@ -19,3 +39,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
